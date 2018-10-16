@@ -1,0 +1,39 @@
+/*Style for the header*/
+
+.header-wrapper{
+  color: white;
+  background-color: black;
+  width: 100vw;
+  /* height: 15vh; */
+  display: grid;
+  grid-template-columns: 50% 10% 40%;
+  align-items: center;
+}
+
+.header-title{
+  margin-left: 20px;
+  justify-self: start;
+}
+
+.header-buttons{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  justify-self: end;
+  margin-right: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.header-buttons a{
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  background-color: #c61f1f;
+  padding: 10px 15px;
+  max-width: 70px;
+}
+
+/* .header-wrapper a:hover{
+  background-color: #c61f1f;
+} */
