@@ -1,5 +1,6 @@
 import setupDb from './db'
-import {createKoaServer} from "routing-controllers"
+import {createKoaServer, Action, BadRequestError} from "routing-controllers"
+import { verify } from './jwt';
 import GameController from './games/controller'
 import UserController from './users/controller';
 import LoginController from './logins/controller'
@@ -12,7 +13,22 @@ const app = createKoaServer({
      GameController,
      UserController,
      LoginController
-   ]
+   ],
+   authorizationChecker: (action: Action) => {
+    const header: string = action.request.headers.authorization
+
+    if(header && header.startsWith('Bearer ')){
+      const [ , token ] = header.split(' ')
+      
+      try {
+       return !!(token && verify(token))
+     }
+     catch (e) {
+       throw new BadRequestError(e)
+     }
+    }
+      return false
+  }
 })
 
 setupDb()
