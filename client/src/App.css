@@ -6,7 +6,7 @@
   width: 100vw;
   height: 15vh;
   display: grid;
-  grid-template-columns: 1fr 5fr 5fr;
+  grid-template-columns: 1fr 7fr 7fr;
   grid-column-gap: 20px;
   align-items: center;
 }
@@ -58,8 +58,8 @@
   padding: 10px;
 }
 
-/* Styling Games container*/
+/* Styling Event List*/
 
-.games-wrapper{
+.event-list-wrapper{
   min-height: 75vh;
 }

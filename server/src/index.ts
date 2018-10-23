@@ -1,7 +1,7 @@
 import setupDb from './db'
 import {createKoaServer, Action, BadRequestError} from "routing-controllers"
 import { verify } from './jwt';
-import GameController from './games/controller'
+import EventController from './events/controller'
 import UserController from './users/controller';
 import LoginController from './logins/controller'
 
@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000
 const app = createKoaServer({
   cors: true,
    controllers: [
-     GameController,
+     EventController,
      UserController,
      LoginController
    ],

@@ -5,7 +5,7 @@ import Header from './components/Header'
 import LoginPage from './components/login/LoginPage'
 import SignUpPage from './components/signup/SignUpPage'
 import LogoutPage from './components/login/LogoutPage'
-import GamesContainer from './components/GamesContainer'
+import EventList from './components/EventList'
 import Footer from './components/Footer'
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Route exact path="/" component={GamesContainer}/>
+        <Route exact path="/" component={EventList}/>
         <Route exact path="/login" component={LoginPage}/>
         <Route exact path="/signup" component={SignUpPage}/>
         <Route exact path="/logout" component={LogoutPage}/>

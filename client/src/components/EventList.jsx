@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {GameDetails} from './GameDetails'
+import {EventDetails} from './EventDetails'
 import {getUsers} from '../actions/users'
 import {userId} from '../jwt'
 
-class GamePage extends Component{
+class EventList extends Component{
 
   componentWillMount(){
     if (this.props.authenticated) {
@@ -14,7 +14,7 @@ class GamePage extends Component{
 
   render(){
     return (
-      <GameDetails/>
+      <EventDetails/>
     )
   }
 
@@ -32,4 +32,4 @@ const mapDispatchToProps = {
   getUsers
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(GamePage)
+export default connect(mapStateToProps, mapDispatchToProps)(EventList)
