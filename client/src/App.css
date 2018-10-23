@@ -53,13 +53,44 @@
   height: 10vh;
 }
 
-.credit-logo{
+.credit-dragon{
   font-size: 12px;
   padding: 10px;
+}
+
+/*Styling login page */
+
+.login-page{
+  min-height: 75vh;
+}
+
+/*Styling signup page */
+
+.sign-up-page{
+  min-height: 75vh;
 }
 
 /* Styling Event List*/
 
 .event-list-wrapper{
   min-height: 75vh;
+  background-image: url('./lib/images/paper.jpg');
+  background-size: cover;
+}
+
+.event-info{
+  width: 70%;
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  background-color: rgba(252, 252, 252, 0.7)
+  /* background-image: url('./lib/images/paper.jpg');
+  background-size: cover; */
+}
+
+.event-image{
+  max-height: 150px;
+  max-width: 250px;
 }
