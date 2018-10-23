@@ -6,6 +6,7 @@ import LoginPage from './components/login/LoginPage'
 import SignUpPage from './components/signup/SignUpPage'
 import LogoutPage from './components/login/LogoutPage'
 import GamesContainer from './components/GamesContainer'
+import Footer from './components/Footer'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Route exact path="/login" component={LoginPage}/>
         <Route exact path="/signup" component={SignUpPage}/>
         <Route exact path="/logout" component={LogoutPage}/>
+        <Footer/>
       </div>
     );
   }

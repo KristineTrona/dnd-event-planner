@@ -2,11 +2,13 @@ import React from 'react'
 import {userId} from '../jwt'
 import {connect} from 'react-redux'
 import { Link} from 'react-router-dom'
+import dragon from '../lib/images/dragon.svg'
 
 function Header (props) {
   
   return(
     <div className="header-wrapper" >
+      <img className= "dragon-image" src={dragon} alt="dragon logo"/>
       <h1 className="header-title">The Dungeon Master</h1>
       { 
         !props.user &&

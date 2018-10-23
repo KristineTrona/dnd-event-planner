@@ -4,14 +4,20 @@
   color: white;
   background-color: black;
   width: 100vw;
-  /* height: 15vh; */
+  height: 15vh;
   display: grid;
-  grid-template-columns: 50% 10% 40%;
+  grid-template-columns: 1fr 5fr 5fr;
+  grid-column-gap: 20px;
   align-items: center;
 }
 
-.header-title{
+.dragon-image{
+  height: 80%;
   margin-left: 20px;
+  justify-self: end;
+}
+
+.header-title{
   justify-self: start;
 }
 
@@ -37,3 +43,23 @@
 /* .header-wrapper a:hover{
   background-color: #c61f1f;
 } */
+
+
+/* Styling Footer */
+
+.footer-wrapper{
+  background-color: black;
+  color: white;
+  height: 10vh;
+}
+
+.credit-logo{
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* Styling Games container*/
+
+.games-wrapper{
+  min-height: 75vh;
+}
