@@ -56,6 +56,7 @@
 .credit-dragon{
   font-size: 12px;
   padding: 10px;
+  margin: 0px;
 }
 
 /*Styling login page */
@@ -76,21 +77,22 @@
   min-height: 75vh;
   background-image: url('./lib/images/paper.jpg');
   background-size: cover;
+  padding: 15px;
+  display: grid;
+  grid-row-gap: 10px;
 }
 
 .event-info{
-  width: 70%;
-  /* margin-top: 10px;
-  margin-bottom: 10px; */
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 20px;
-  background-color: rgba(252, 252, 252, 0.7)
-  /* background-image: url('./lib/images/paper.jpg');
-  background-size: cover; */
+  background-color: rgba(252, 252, 252, 0.7);
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
 }
 
 .event-image{
   max-height: 150px;
-  max-width: 250px;
+  max-width: 200px;
 }
