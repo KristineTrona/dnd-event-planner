@@ -1,0 +1,1 @@
+This application is supposed to help people who like to play Dungeons and Dragons games to plan out meetings, sign up for games and create new character sheets. It is still a work in process. Once the project is finished it will be deployed and the link to the site will be provided. 

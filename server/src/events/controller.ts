@@ -1,4 +1,4 @@
-import EventEntity from './entity'
+import {Event as EventEntity} from './entity'
 import {Controller, Get} from 'routing-controllers'
 
 @Controller()

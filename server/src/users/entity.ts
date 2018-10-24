@@ -1,7 +1,8 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column} from 'typeorm'
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, OneToMany} from 'typeorm'
 import * as bcrypt from 'bcrypt'
 import { IsEmail, IsString, MinLength, Length } from '../../node_modules/class-validator';
 import { Exclude } from '../../node_modules/class-transformer'
+import {Player} from '../events/entity'
 
 @Entity()
 export default class User extends BaseEntity {
@@ -23,6 +24,9 @@ export default class User extends BaseEntity {
   @Column('text', {nullable:false})
   @Exclude({ toPlainOnly: true })
   password: string
+
+  @OneToMany(_ => Player, player => player.user) 
+  players: Player[]
 
 
   async setPassword(rawPassword: string) {
