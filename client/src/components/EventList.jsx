@@ -6,8 +6,8 @@ export const EventList = (props) =>{
   return (
     <div className="event-list-wrapper">
       {props.events.map(event => 
-        <Link to={`/events/${event.id}`} style={{textDecoration: "none", color: "inherit"}}>
-        <div className = "event-info" key={event.id}>
+        <Link to={`/events/${event.id}`} style={{textDecoration: "none", color: "inherit"}} key={event.id}>
+        <div className = "event-info">
           <img className="event-image" src={event.image} alt="artistic visualization of the game"/>
           <div className="event-title-description">
             <h4 className="event-title">{event.title}</h4>

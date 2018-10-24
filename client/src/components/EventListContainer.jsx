@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {userId} from '../jwt'
+//import {userId} from '../jwt'
 import {EventList} from './EventList'
 import {getUsers} from '../actions/users'
 import {getEvents} from '../actions/events'
@@ -27,7 +27,7 @@ const mapStateToProps = (state) => {
     events: state.events,
     authenticated: state.currentUser !== null,
     users: state.users,
-    userId: state.currentUser && userId(state.currentUser.jwt)
+    //userId: state.currentUser && userId(state.currentUser.jwt)
   }
 }
 

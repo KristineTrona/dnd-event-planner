@@ -9,7 +9,7 @@ function Header (props) {
   return(
     <div className="header-wrapper" >
       <img className= "dragon-image" src={dragon} alt="dragon logo"/>
-      <h1 className="header-title">The Dungeon Master</h1>
+      <Link to="/" style={{textDecoration: "none", color: "inherit"}}> <h1 className="header-title">The Dungeon Master</h1></Link>
       { 
         !props.user &&
           <div className="header-buttons">
@@ -20,6 +20,7 @@ function Header (props) {
       {
         props.user && 
         <div className="header-buttons">
+          <Link to={`/users/${props.user.username}`} className="user-button">{props.user.username}</Link>
           <Link to="/logout" className="log-out-button">Log out</Link>
         </div>
       }

@@ -8,6 +8,7 @@ import LogoutPage from './components/login/LogoutPage'
 import EventListContainer from './components/EventListContainer'
 import Footer from './components/Footer'
 import EventDetailsContainer from './components/EventDetailsContainer'
+import UserPageContainer from './components/UserPageContainer';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <Route exact path="/login" component={LoginPage}/>
         <Route exact path="/signup" component={SignUpPage}/>
         <Route exact path="/logout" component={LogoutPage}/>
+        <Route exact path="/users/:username" component={UserPageContainer}/>
         <Footer/>
       </div>
     );
