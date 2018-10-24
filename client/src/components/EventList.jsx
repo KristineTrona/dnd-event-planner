@@ -1,39 +1,34 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {userId} from '../jwt'
-import {EventDetails} from './EventDetails'
-import {getUsers} from '../actions/users'
-import {getEvents} from '../actions/events'
+import React from "react"
+import {Link} from 'react-router-dom'
+const Moment = require('moment')
 
-class EventList extends Component{
-
-  componentDidMount(){
-    if (this.props.authenticated) {
-      if (this.props.users === null) this.props.getUsers()
-    }
-    this.props.getEvents()
-  }
-
-  render(){
-    return (
-      <EventDetails events={this.props.events}/>
-    )
-  }
-
+export const EventList = (props) =>{
+  return (
+    <div className="event-list-wrapper">
+      {props.events.map(event => 
+        <Link to={`/events/${event.id}`} style={{textDecoration: "none", color: "inherit"}}>
+        <div className = "event-info" key={event.id}>
+          <img className="event-image" src={event.image} alt="artistic visualization of the game"/>
+          <div className="event-title-description">
+            <h4 className="event-title">{event.title}</h4>
+            {event.description}
+          </div>
+          <div className="event-time-place">
+            <div>
+              <strong>Players:</strong> {event.players.length}
+            </div>
+            <div>
+              <strong>Date:</strong> {Moment(event.date).format('MMM Do YYYY')}
+            </div>
+            <div>
+              <strong>Time:</strong> {event.time}
+            </div>
+            <div>
+              <strong>Place:</strong> {event.place}
+            </div>
+          </div>
+        </div>
+        </Link>)}
+    </div>
+  )
 }
-
-const mapStateToProps = (state) => {
-  return {
-    events: state.events,
-    authenticated: state.currentUser !== null,
-    users: state.users,
-    userId: state.currentUser && userId(state.currentUser.jwt)
-  }
-}
-
-const mapDispatchToProps = {
-  getUsers,
-  getEvents
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(EventList)
