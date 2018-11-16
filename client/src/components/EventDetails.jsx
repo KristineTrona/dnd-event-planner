@@ -3,7 +3,7 @@ import React from "react"
 export const EventDetails = () =>{
   return (
     <div className="event-details-wrapper">
-      Test
+      
     </div>
   )
 }

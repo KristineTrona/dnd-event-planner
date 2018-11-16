@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import './App.css';
-import Header from './components/Header'
+import {Route} from 'react-router-dom'
+import Navbar from './components/Navbar'
 import LoginPage from './components/login/LoginPage'
 import SignUpPage from './components/signup/SignUpPage'
 import LogoutPage from './components/login/LogoutPage'
@@ -14,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
+        <Navbar/>
         <Route exact path="/" component={EventListContainer}/>
         <Route exact path="/events" component={EventListContainer}/>
         <Route exact path="/events/:id" component={EventDetailsContainer}/>

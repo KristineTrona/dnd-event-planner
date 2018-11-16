@@ -1,57 +1,8 @@
 /*Style for the header*/
 
-.header-wrapper{
-  color: white;
-  background-color: black;
-  width: 100vw;
-  height: 15vh;
-  display: grid;
-  grid-template-columns: 1fr 7fr 7fr;
-  grid-column-gap: 20px;
-  align-items: center;
-}
-
 .dragon-image{
-  height: 80%;
-  margin-left: 20px;
-  justify-self: end;
+  max-height: 100px;
 }
-
-.header-title{
-  justify-self: start;
-}
-
-.header-buttons{
-  grid-column-start: 3;
-  grid-column-end: 4;
-  align-self: center;
-  justify-self: end;
-  margin-right: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-}
-
-.sign-up-button, .log-in-button, .log-out-button{
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  background-color: #c61f1f;
-  padding: 10px 15px;
-  max-width: 70px;
-}
-
-.user-button{
-  text-decoration: none;
-  color: inherit;
-  align-self: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* .header-wrapper a:hover{
-  background-color: #c61f1f;
-} */
 
 /* Styling for the user page */
 
@@ -125,5 +76,6 @@
 
 .event-details-wrapper{
   min-height: 75vh;
+  background-image: url('./lib/images/paper.jpg');
 }
 

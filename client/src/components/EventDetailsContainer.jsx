@@ -12,7 +12,7 @@ class EventDetailsContainer extends Component{
       if (this.props.users === null)
         this.props.getUsers()
     }
-    if (this.props.events === null)
+    if (this.props.events.length === 0)
       this.props.getEvents()
   }
 
