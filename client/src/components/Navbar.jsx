@@ -33,13 +33,12 @@ function Navbar (props) {
           props.user &&           
           <div className="collapse navbar-collapse py-2" id="navbarNav">
             <ul className="navbar-nav ml-auto mr-5">
-              <li className="nav-item">
-                <i className="fas fa-user fa-2x mr-2"></i>
+              <li className="nav-item mr-2 my-2 my-md-0">
                 <Link to={`/users/${props.user.username}`} className="btn btn-dark">
-                  {props.user.username}
+                  <i className="fas fa-user  mr-2"></i> {props.user.username}
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item my-2 my-md-0">
                 <Link to="/logout" className="btn btn-danger">Log out</Link>
               </li>
             </ul>
