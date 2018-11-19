@@ -12,3 +12,7 @@ gulp.task('bootstrap', function(){
     .pipe(sass())
     .pipe(gulp.dest('./src/'));
 });
+
+gulp.task('watch', function(){
+  gulp.watch('./src/*.scss', ['sass']); 
+})

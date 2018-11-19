@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {userId} from '../jwt'
 import {EventDetails} from './EventDetails'
 import {getUsers} from '../actions/users'
 import {getEvents} from '../actions/events'
@@ -18,7 +17,7 @@ class EventDetailsContainer extends Component{
 
   render(){
     return (
-      <EventDetails/>
+      <EventDetails events={this.props.events} eventId={this.props.match.params.id}/>
     )
   }
 
@@ -29,7 +28,6 @@ const mapStateToProps = (state) => {
     events: state.events,
     authenticated: state.currentUser !== null,
     users: state.users,
-    userId: state.currentUser && userId(state.currentUser.jwt)
   }
 }
 

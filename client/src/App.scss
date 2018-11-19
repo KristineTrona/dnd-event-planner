@@ -1,84 +1,74 @@
-/*Style for the header*/
+
+.user-page-wrapper, .login-page, .sign-up-page, 
+#eventList, #eventDetails{
+  min-height: 75vh;
+}
+
+/*Styling for the navbar*/
+
+.navbar{
+  height: 15vh;
+}
 
 .dragon-image{
   max-height: 80px;
 }
 
+/* Styling for the footer*/
 
-
-/* Styling for the user page */
-
-.user-page-wrapper{
-  min-height: 75vh;
-}
-
-/* Styling Footer */
-
-.footer-wrapper{
-  background-color: black;
-  color: white;
+footer{
   height: 10vh;
+
+  p{
+    font-size: 12px;
+  }
 }
 
-.credit-dragon{
-  font-size: 12px;
-  padding: 10px;
-  margin: 0px;
-}
-
-/*Styling login page */
-
-.login-page{
-  min-height: 75vh;
-}
-
-/*Styling signup page */
-
-.sign-up-page{
-  min-height: 75vh;
+#eventList, #eventDetails{
+  background-image: url('./lib/images/paper.jpg');
 }
 
 /* Styling Event List*/
 
-.event-list-wrapper{
-  min-height: 75vh;
-  background-image: url('./lib/images/paper.jpg');
-  background-size: cover;
-  padding: 15px;
-  display: grid;
-  grid-row-gap: 10px;
-}
+// .event-list-wrapper{
+//   min-height: 75vh;
+//   background-image: url('./lib/images/paper.jpg');
+//   background-size: cover;
+//   padding: 15px;
+//   display: grid;
+//   grid-row-gap: 10px;
+// }
 
-.event-info{
-  width: 80%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 20px;
-  background-color: rgba(252, 252, 252, 0.7);
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-}
+// .event-info{
+//   width: 80%;
+//   max-width: 900px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding: 10px 20px;
+//   background-color: rgba(252, 252, 252, 0.7);
+//   display: grid;
+//   grid-template-columns: 1fr 3fr 1fr;
+// }
 
-.event-image{
-  max-height: 150px;
-  max-width: 200px;
-  align-self: center;
-}
+// .event-image{
+//   max-height: 150px;
+//   max-width: 200px;
+//   align-self: center;
+// }
 
-.event-title{
-  margin: 0px 0px 10px 0px;
-}
+// .event-title{
+//   margin: 0px 0px 10px 0px;
+// }
 
-.event-title-description{
-  padding: 0px 20px;
-}
+// .event-title-description{
+//   padding: 0px 20px;
+// }
 
-/* Style event details */
+// /* Style event details */
 
-.event-details-wrapper{
-  min-height: 75vh;
-  background-image: url('./lib/images/paper.jpg');
-}
+// .event-details-wrapper{
+//   min-height: 75vh;
+//   background-image: url('./lib/images/paper.jpg');
+// }
 
 
