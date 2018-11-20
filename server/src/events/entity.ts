@@ -14,7 +14,7 @@ export class Event extends BaseEntity {
   @Column("text", {nullable:false})
   description: string
 
-  @Column("text", {nullable: false})
+  @Column("text", {nullable: true})
   image: string
 
   @Column ("date")
@@ -37,7 +37,7 @@ export class Player extends BaseEntity {
   @PrimaryGeneratedColumn()
   id?: number
 
-  @ManyToOne(_ => User, user => user.players, {nullable: true})
+  @ManyToOne(_ => User, user => user.players, {eager: true, nullable: true})
   user: User
 
   @ManyToOne(_ => Event, game => game.players, {nullable: true})

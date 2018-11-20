@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {EventDetails} from './EventDetails'
 import {getUsers} from '../actions/users'
-import {getEvents} from '../actions/events'
+import {getEvents, getEventDetails} from '../actions/events'
 
 class EventDetailsContainer extends Component{
 
@@ -13,11 +13,13 @@ class EventDetailsContainer extends Component{
     }
     if (this.props.events.length === 0)
       this.props.getEvents()
+
+    this.props.getEventDetails(this.props.match.params.id)
   }
 
   render(){
     return (
-      <EventDetails events={this.props.events} eventId={this.props.match.params.id}/>
+      <EventDetails event={this.props.selectedEvent} users={this.props.users}/>
     )
   }
 
@@ -28,12 +30,14 @@ const mapStateToProps = (state) => {
     events: state.events,
     authenticated: state.currentUser !== null,
     users: state.users,
+    selectedEvent: state.selectedEvent
   }
 }
 
 const mapDispatchToProps = {
   getUsers,
-  getEvents
+  getEvents,
+  getEventDetails
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventDetailsContainer)

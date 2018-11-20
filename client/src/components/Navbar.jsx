@@ -20,6 +20,8 @@ function Navbar (props) {
         { 
           !props.user &&
           <ul className="navbar-nav ml-auto mr-5">
+            <li className="nav-item">
+            </li>
             <li className="nav-item mr-2 my-2 my-md-0">
               <Link to="/login" className="btn btn-danger mx-2">Log in</Link>
             </li>
